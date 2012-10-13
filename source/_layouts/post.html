@@ -1,0 +1,15 @@
+﻿---
+layout: default
+single: true
+---
+
+<article class="post">{% include article.html %}</article>
+{% unless page.sharing == false %}
+	{% include post/sharing.html %}
+{% endunless %}
+{% if site.duoshuo_show_comment_count==true and page.comments==true %}
+<section id= comment >
+<h1>发表评论</h1>
+{% include post/duoshuo.html %}
+</section>
+{% endif %}
